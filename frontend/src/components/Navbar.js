@@ -21,6 +21,12 @@ function Navbar() {
             Home
           </Link>
           <Link to="/tweets" className="nav-item nav-link">
+            CaptureProgress
+          </Link>
+          <Link to="/tweets" className="nav-item nav-link">
+            DailyProgressList
+          </Link>
+          <Link to="/tweets" className="nav-item nav-link">
             Tweets
           </Link>
         </div>

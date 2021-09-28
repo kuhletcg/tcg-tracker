@@ -11,20 +11,6 @@ const HomePage = () => {
     }
   }, []);
 
-  const loginWithGoogle = () => {
-    setIsLoading(true);
-    var googleProvider = new firebase.auth.GoogleAuthProvider();
-    fireAuth
-      .signInWithRedirect(googleProvider)
-      .then((res) => {
-        setIsLoading(false);
-      })
-      .catch((err) => {
-        console.log(err);
-        setIsLoading(false);
-      });
-  };
-
   return (
     <div style={{ textAlign: "center" }}>
       <Header size="medium">

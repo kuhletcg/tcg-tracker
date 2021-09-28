@@ -1,22 +1,14 @@
-import { Button, Icon, Header, Label } from "semantic-ui-react";
-import React, { useEffect, useState } from "react";
-import history from "../routes/history";
+import React from "react";
 
-const HomePage = () => {
-  const [isLoading, setIsLoading] = useState(false);
-
-  useEffect(() => {
-    if (state.authUser !== null) {
-      history.push("/progress-list");
-    }
-  }, []);
-
+function HomePage() {
   return (
-    <div style={{ textAlign: "center" }}>
-      <Header size="medium">
-        TCG tracker <Label color="primary">1.0.1 </Label>
-      </Header>
-    </div>
+    <section>
+      <div class="container-fluid">
+        <h1 class="mt-5">Welcome</h1>
+        <p>This is The Coding Ground Tracker.</p>
+      </div>
+    </section>
   );
-};
+}
+
 export default HomePage;

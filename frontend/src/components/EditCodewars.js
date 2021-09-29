@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { editStudent } from "../redux/actions/form";
 
-function EditProgress({ id, progress }) {
-  const [edit, setEdit] = useState(progress);
+function EditCodewars({ id, codewars }) {
+  const [edit, setEdit] = useState(codewars);
   const dispatch = useDispatch();
 
   const handleEdit = (e) => {
     e.preventDefault();
-    dispatch(editStutdent({ id, edit }));
+    dispatch(editStudent({ id, edit }));
   };
 
   return (
@@ -26,4 +26,4 @@ function EditProgress({ id, progress }) {
   );
 }
 
-export default EditProgress;
+export default EditCodewars;

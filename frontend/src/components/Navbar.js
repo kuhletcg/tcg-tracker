@@ -20,14 +20,14 @@ function Navbar() {
           <Link to="/" className="nav-item nav-link active">
             Home
           </Link>
-          <Link to="/tweets" className="nav-item nav-link">
+          {/* <Link to="/CaptureProgress" className="nav-item nav-link">
             CaptureProgress
-          </Link>
-          <Link to="/tweets" className="nav-item nav-link">
+          </Link> */}
+          {/* <Link to="/DailyProgressList" className="nav-item nav-link">
             DailyProgressList
-          </Link>
-          <Link to="/tweets" className="nav-item nav-link">
-            Tweets
+          </Link> */}
+          <Link to="/captureProgressForm" className="nav-item nav-link">
+            CaptureProgressForm
           </Link>
         </div>
       </div>

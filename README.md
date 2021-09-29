@@ -1,6 +1,6 @@
 # tcg-tracker
 
-## Wellcome to my app
+## Welcome to my app
 
 This is where I will describe my app. I have created a TCG tracker using mongoose, express, react, and redux.
 

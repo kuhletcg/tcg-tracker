@@ -11,5 +11,5 @@ The first thing you going to see in my app is a form. Whereby student has to fil
 
 After pressing a submit button is going to redirect you to another page whereby you will see all the details.
 
-I also created an edit button. You can press the edit button if you want to edit the code wars score any. I also have the delete button.
+I also created an edit button. You can press the edit button if you want to edit the code wars score only. I also have the delete button.
 You can use the delete button if you have made a mistake.

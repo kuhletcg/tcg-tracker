@@ -11,10 +11,6 @@ function StudentProgress() {
 
   const [isEditable, setIsEditable] = useState(false);
 
-  // const completeAndGetStudents = (id) => {
-  //   dispatch(completed(id));
-  //   dispatch(getStudent());
-  // };
   const openEditForm = (id) => {
     return students.find((student) => {
       if (student.id === id) {
@@ -38,19 +34,10 @@ function StudentProgress() {
         <tbody>
           {students.length > 0 &&
             students.map((student) => {
-              const {
-                id,
-                freecodecamp,
-                typing,
-                codewars,
-                blogpost,
-                isCompleted,
-              } = student;
+              const { id, freecodecamp, typing, codewars, blogpost } = student;
 
               return (
-                <tr
-                // key={id} className={`${isCompleted ? "complete" : ""} `}
-                >
+                <tr>
                   <td>{freecodecamp}</td>
                   <td>{typing}</td>
                   <td>{codewars}</td>
@@ -61,11 +48,6 @@ function StudentProgress() {
                   </td>
                   {
                     <div className="display-button">
-                      {/* <div>
-                        <button onClick={() => completeAndGetStudents(id)}>
-                          Complete
-                        </button>
-                      </div> */}
                       <div>
                         <button onClick={() => openEditForm(id)}>Edit</button>
 

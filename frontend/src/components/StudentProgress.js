@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { completed, deleteStudent, getStudent } from "../redux/actions/form";
+import { deleteStudent } from "../redux/actions/form";
 import { Table } from "reactstrap";
 import EditCodewars from "./EditCodewars";
 
@@ -11,10 +11,10 @@ function StudentProgress() {
 
   const [isEditable, setIsEditable] = useState(false);
 
-  const completeAndGetStudents = (id) => {
-    dispatch(completed(id));
-    dispatch(getStudent());
-  };
+  // const completeAndGetStudents = (id) => {
+  //   dispatch(completed(id));
+  //   dispatch(getStudent());
+  // };
   const openEditForm = (id) => {
     return students.find((student) => {
       if (student.id === id) {
@@ -28,34 +28,44 @@ function StudentProgress() {
       <Table dark>
         <thead>
           <tr>
-            <th>freeCodeCamp</th>
-            <th>typing</th>
-            <th>codeWars</th>
-            <th></th>
+            <th>FreeCodeCamp</th>
+            <th>Typing</th>
+            <th>CodeWars</th>
+            <th>BlogPost</th>
             <th></th>
           </tr>
         </thead>
         <tbody>
           {students.length > 0 &&
             students.map((student) => {
-              const { id, freecodecamp, typing, codewars, isCompleted } =
-                student;
+              const {
+                id,
+                freecodecamp,
+                typing,
+                codewars,
+                blogpost,
+                isCompleted,
+              } = student;
 
               return (
-                <tr key={id} className={`${isCompleted ? "complete" : ""} `}>
+                <tr
+                // key={id} className={`${isCompleted ? "complete" : ""} `}
+                >
                   <td>{freecodecamp}</td>
                   <td>{typing}</td>
                   <td>{codewars}</td>
+                  <td>{blogpost}</td>
+
                   <td>
                     {isEditable ? codewars : <EditCodewars {...student} />}
                   </td>
                   {
                     <div className="display-button">
-                      <div>
+                      {/* <div>
                         <button onClick={() => completeAndGetStudents(id)}>
                           Complete
                         </button>
-                      </div>
+                      </div> */}
                       <div>
                         <button onClick={() => openEditForm(id)}>Edit</button>
 

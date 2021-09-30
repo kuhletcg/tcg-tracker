@@ -5,31 +5,33 @@ import { addStudent, getStudent } from "../redux/actions/form";
 function Form() {
   const [formInfo, setFormInfo] = useState({
     freecodecamp: "",
-    codewars: "",
     typing: "",
+    codewars: "",
+    blogpost: "",
     isCompleted: false,
   });
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getStudent());
   }, [dispatch, formInfo]);
-  const { freecodecamp, codewars, typing } = formInfo;
+  const { freecodecamp, typing, codewars, blogpost } = formInfo;
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormInfo({ ...formInfo, [name]: value });
   };
   const handleSubmit = (e) => {
-    const { freecodecamp, codewars, typing } = formInfo;
+    const { freecodecamp, codewars, typing, blogpost } = formInfo;
     e.preventDefault();
 
-    if ((freecodecamp, codewars, typing)) {
+    if ((freecodecamp, typing, codewars, blogpost)) {
       dispatch(addStudent(formInfo));
       console.log("formInfo", formInfo);
       setFormInfo({
         ...formInfo,
         freecodecamp: "",
-        codewars: "",
         typing: "",
+        codewars: "",
+        blogpost: "",
       });
     }
   };
@@ -64,6 +66,16 @@ function Form() {
           onChange={handleChange}
           placeholder="Enter your typing WPM"
           value={typing}
+          required
+        />
+        <label htmlFor="codewars">BlogPost</label>
+        <input
+          type="text"
+          name="blogpost"
+          id="blogpost"
+          placeholder="Enter blogpost link"
+          onChange={handleChange}
+          value={blogpost}
           required
         />
         <button type="submit">Submit</button>

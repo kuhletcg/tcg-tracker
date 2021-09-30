@@ -1,20 +1,14 @@
 import "./App.css";
-import Nav from "./components/Navbar";
-import HomePage from "./components/HomePage";
-import Tweet from "./components/Tweet";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import StudentProgress from "./components/StudentProgress";
+import Form from "./components/Form";
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Nav />
-        <Switch>
-          <Route path="/" exact component={HomePage} />
-          <Route path="/tweets" exact component={Tweet} />
-        </Switch>
-      </div>
-    </Router>
+    <div className="App">
+      <header className="App-header"></header>
+      <Form />
+      <StudentProgress />
+    </div>
   );
 }
 

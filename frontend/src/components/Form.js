@@ -37,6 +37,7 @@ function Form() {
   };
   return (
     <div className="student-form">
+      <h1> TCG TRACKER</h1>
       <form onSubmit={handleSubmit}>
         <label htmlFor="freecodecamp">Freecodecamp</label>
         <input

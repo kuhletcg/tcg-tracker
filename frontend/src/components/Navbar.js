@@ -1,38 +1,24 @@
-import React from "react"; // ES6 js
+import React from "react";
 import { Link } from "react-router-dom";
-
-function Navbar() {
+const Navbar = () => {
   return (
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark top">
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navMainMenu"
-        aria-controls="navMainMenu"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div id="navMainMenu" class="navbar-collapse collapse">
-        <div class="navbar-nav ml-auto">
-          <Link to="/" className="nav-item nav-link active">
-            Home
-          </Link>
-          {/* <Link to="/CaptureProgress" className="nav-item nav-link">
-            CaptureProgress
-          </Link> */}
-          {/* <Link to="/DailyProgressList" className="nav-item nav-link">
-            DailyProgressList
-          </Link> */}
-          <Link to="/captureProgressForm" className="nav-item nav-link">
-            CaptureProgressForm
-          </Link>
-        </div>
+    <nav className="nav-bar">
+      <div className="left-nav-item"></div>
+      <div className="right-nav-items">
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/StudentForm">Register student</Link>
+          </li>
+          <li>
+            <Link to="/displayStudents">View students</Link>
+          </li>
+        </ul>
       </div>
     </nav>
   );
-}
+};
 
 export default Navbar;
